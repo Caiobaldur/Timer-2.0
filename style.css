@@ -53,9 +53,9 @@ body {
 
 .modeButton {
   position: absolute;
-  width: clamp(0.5rem, 0.5rem, 3rem);
-  top: clamp(5rem, 3rem + 3vw, 6rem);
-  right: clamp(8rem, 2rem + 1vw, 6rem);
+  width: clamp(1rem, 0.5rem, 3rem);
+  top: clamp(2rem, 3rem + 3vw, 6rem);
+  right: clamp(5rem, 2rem + 1vw, 7rem);
 }
 
 .modeOff {
