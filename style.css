@@ -1,0 +1,191 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  
+  /* cores */
+  --bg-color: #ffffff;
+  --press-color: #02799D;
+  --sbutton-color: #E1E1E6;
+  --font-color: #323238;
+
+  /* cores do dark mode */
+  --bg-color-dark: #0f0f0f;
+  --press-color-dark: #ABCDEF;
+  --sbutton-color-dark: #555555;
+  --font-color-dark: #ffffff;
+
+  /* fontes */
+  --principal-font: 'Roboto', sans-serif;
+}
+
+.lightmodeButton path {
+  fill: white;
+}
+
+.darkmodeButton path {
+  fill: black;
+}
+
+.light-mode {
+  background-color: var(--bg-color-light);
+  color: var(--font-color-light);
+}
+
+.dark-mode {
+  background-color: var(--bg-color-dark);
+  color: var(--font-color-dark);
+}
+
+body {
+  background-color: var(--bg-color);
+  min-height: 100vh;
+  color: var(--font-color);
+  display: grid;
+}
+
+
+
+.modeButton {
+  position: absolute;
+  width: clamp(0.5rem, 0.5rem, 3rem);;
+  top: clamp(2rem, 3rem + 3vw, 6rem);
+  right: clamp(5rem, 3rem + 3vw, 6rem);
+}
+
+.modeOff {
+  display: none;
+}
+
+main {
+  display: grid;
+  justify-self: center;
+  align-self: end;
+  grid-template-columns: autorepeat(2,1fr);
+  grid-template-rows: 1;
+  gap: 10rem;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  width: clamp(3rem, 3rem + 3vw, 4.8rem);
+}
+
+.hide {
+  display: none;
+}
+
+.timer__wrapper {
+  grid-column: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.timer {
+  font-family: var(--principal-font);
+  font-size: clamp(7rem, 7rem + 3vw , 12.6rem);
+  font-weight: 500;
+}
+
+
+.buttons__wrapper {
+  display: flex;
+  margin-top: 4.8rem;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.sound-buttons__wrapper {
+  grid-column: 2;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr 1fr; /* define duas linhas com a mesma altura */
+  gap: clamp(1.8rem, 1.8rem + 3vw, 3.5rem ); /* espaço entre os botões */
+}
+
+/* posicção de cada botão em uma linha específica */
+button:nth-child(1) {
+  grid-row: 1;
+}
+
+button:nth-child(2) {
+  grid-row: 1;
+}
+
+button:nth-child(3) {
+  grid-row: 2;
+}
+
+button:nth-child(4) {
+  grid-row: 2;
+}
+
+.sound-buttons__wrapper button {
+  position: relative;
+  width: 13.8rem;
+  height: 15.2rem;
+  border-radius: 2.4rem;
+  background-color: var(--sbutton-color);
+}
+
+.test_nature {
+  position: relative;
+}
+
+.test_rain {
+  position: relative;
+}
+
+.test_room {
+  position: relative;
+}
+
+.test_fire {
+  position: relative;
+}
+
+.sound-buttons__wrapper .button-check {
+  background-color: var(--press-color);
+  transition: 1000ms;
+}
+
+.button-check img {
+  filter: invert(100%) brightness(1.5);
+}
+
+input {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  justify-self: center;
+  appearance: none;
+  border-radius: 0.5rem;
+  background-color: #000000;
+  height: 0.4rem;
+
+}
+
+input::-webkit-slider-thumb {
+  appearance: none;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  background: #000000;
+}
+
+
+
+
+
+
+
