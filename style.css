@@ -41,6 +41,7 @@
   color: var(--font-color-dark);
 }
 
+
 body {
   background-color: var(--bg-color);
   min-height: 100vh;
@@ -52,9 +53,9 @@ body {
 
 .modeButton {
   position: absolute;
-  width: clamp(0.5rem, 0.5rem, 3rem);;
-  top: clamp(2rem, 3rem + 3vw, 6rem);
-  right: clamp(5rem, 3rem + 3vw, 6rem);
+  width: clamp(0.5rem, 0.5rem, 3rem);
+  top: clamp(5rem, 3rem + 3vw, 6rem);
+  right: clamp(8rem, 2rem + 1vw, 6rem);
 }
 
 .modeOff {
@@ -184,6 +185,7 @@ input::-webkit-slider-thumb {
 @media (max-width:1100px) {
   main {
     flex-direction: column;
+    margin-bottom: 5rem;
   }
 }
 
