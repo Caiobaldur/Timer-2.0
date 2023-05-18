@@ -62,11 +62,9 @@ body {
 }
 
 main {
-  display: grid;
+  display: flex;
   justify-self: center;
   align-self: end;
-  grid-template-columns: autorepeat(2,1fr);
-  grid-template-rows: 1;
   gap: 10rem;
 }
 
@@ -183,8 +181,11 @@ input::-webkit-slider-thumb {
   background: #000000;
 }
 
-
-
+@media (max-width:1100px) {
+  main {
+    flex-direction: column;
+  }
+}
 
 
 
