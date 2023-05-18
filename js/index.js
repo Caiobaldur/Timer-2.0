@@ -52,8 +52,32 @@ buttonDark.addEventListener ('click', () => {
   buttonSubtract.classList.add('button-check')
 })
 
+//Button Clicks
+
+buttonPlay.addEventListener ('click', () => {
+  buttonPlay.classList.add('hide')
+  buttonPause.classList.remove('hide')
+
+  countdown()
+  sound.pressButton()
+})
+
+buttonPause.addEventListener ('click', () => {
+  buttonPause.classList.add('hide')
+  buttonPlay.classList.remove('hide')
+  clearTimeout(timerTimeOut)
+  sound.pressButton()
+})
+
+buttonStop.addEventListener ('click', () => {
+  resetControls()
+  clearTimeout(timerTimeOut)
+  resetTimer()
+  sound.pressButton()
+})
+
 buttonAdd.addEventListener ('click', () => {
-  let minutes = Number(minutesDisplay.textContent)
+let minutes = Number(minutesDisplay.textContent)
   minutes += 5;
   minutesDisplay.textContent = String(minutes).padStart(2, '0');
   sound.pressButton()
@@ -70,7 +94,6 @@ buttonSubtract.addEventListener ('click', () => {
   minutesDisplay.textContent = String(minutes).padStart(2, '0');
   sound.pressButton()
 });
-
 
 //Buttons Sounds
 const forestSound = new Audio("/sounds/Floresta.wav");
@@ -130,7 +153,7 @@ buttonFire.addEventListener('click', () => {
   playSound(fireSound, buttonFire);
 });
 
-//Volume Range
+//Volume
 volumeRangeNature.addEventListener('input', function() {
   const volume = volumeRangeNature.value;
   updateVolume(volume, forestSound);
