@@ -8,10 +8,6 @@
 
 Esse é um Timer Pomodoro aprimorado, com darkmode e 4 opções de sons.
 Você pode acrescentar 5 minutos, tendo um som finalizador e a escolha de 4 sons calmos de fundo.
-Realizado no Stage 05 - Explorer da RocketSeat.
-
-
-
 
 ## Aprendizados
 
